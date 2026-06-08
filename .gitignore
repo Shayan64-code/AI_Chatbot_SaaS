@@ -1,2 +1,8 @@
-*.pyc
-app/Keys.py
+# Ignore environment file inside Backend
+Backend/.env
+
+# Ignore Python cache inside Backend
+Backend/__pycache__/
+
+# Ignore virtual environment at root
+.venv/
