@@ -8,4 +8,3 @@ router = APIRouter()
 async def chat_endpoint(request : chat_schemas.ChatRequest):
     response = cb.chatbot(request.message)
     return chat_schemas.ChatResponse(reply= response["message"])
-

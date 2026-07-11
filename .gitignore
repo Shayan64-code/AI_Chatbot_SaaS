@@ -6,3 +6,5 @@ Backend/__pycache__/
 
 # Ignore virtual environment at root
 .venv/
+
+Backend/uploads/
