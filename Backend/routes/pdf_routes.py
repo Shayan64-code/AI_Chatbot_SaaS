@@ -36,7 +36,12 @@ async def upload_pdf(file: UploadFile = File(...)):
     #Embeddings
     embeddings = [embed_txt(chunk) for chunk in chunks]
 
+    #Later Replace with vector DB
+    processed_hash.add(file_hash)
 
-
-    return {"message": "PDF uploaded successfully.", "file_name": file.filename}
+    return {"message": "PDF uploaded successfully.", 
+            "file_name": file.filename,
+            "hash": file_hash,
+            "chunks_count": len(chunks),
+            "sample_chunk": chunks[0][:200] if chunks else None}
         
