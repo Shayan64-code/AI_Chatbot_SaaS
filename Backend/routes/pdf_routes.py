@@ -43,5 +43,7 @@ async def upload_pdf(file: UploadFile = File(...)):
             "file_name": file.filename,
             "hash": file_hash,
             "chunks_count": len(chunks),
-            "sample_chunk": chunks[0][:200] if chunks else None}
+            "sample_chunk": chunks[0][:200] if chunks else None
+            }
+
         
