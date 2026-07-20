@@ -1,9 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
-from sentence_transformers import SentenceTransformer
+from Config import embedding_model
 
-def embed_txt(text: str):
-
-    model_name = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+def embed_txt(text: str, model_name = embedding_model):
 
     embeddings = HuggingFaceEmbeddings(model_name = model_name)
 

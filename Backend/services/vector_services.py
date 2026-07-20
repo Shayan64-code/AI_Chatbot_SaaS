@@ -27,7 +27,7 @@ class VectorService:
         Search Vectors
         """
         results = self.collection.query(
-            query_embeddings=query_embeddings,
+            query_embeddings=[query_embeddings],
             n_result=n_result
         )
 

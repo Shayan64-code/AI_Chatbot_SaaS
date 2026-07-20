@@ -1,12 +1,10 @@
 import chromadb
 import os
+from Config import CHROMA_Collections
+from Config import CHROMA_DB_PATH
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
-CHROMA_DB_Path = os.getenv("CHROMA_DB_PATH")
-CHROMA_COLLECTION = os.getenv("CHROMA_Collections")
+CHROMA_DB_Path = CHROMA_DB_PATH
+CHROMA_COLLECTION = CHROMA_Collections
 
 chroma_client = chromadb.PersistentClient(path= CHROMA_DB_Path)
 
@@ -50,4 +48,4 @@ def reset_database():
     for collection in collections:
         chroma_client.delete_collection(name=collection.name)
 
-    print("✅ ChromaDB has been reset.")
+    print("ChromaDB has been reset.")
