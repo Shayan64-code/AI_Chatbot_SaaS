@@ -23,6 +23,15 @@ class RAGService:
             query_embeddings=Embed_Query
             )
 
-        self.client
+        #Extract retreive documents
+        documents = result["documents"][0]
+
+        #Combine into context
+        context = "\n\n".join(documents)
+
+        #Build Prompt
+        prompt = f""""""
+
+
         
 

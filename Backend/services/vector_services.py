@@ -33,6 +33,17 @@ class VectorService:
 
         return results
 
+    def document_exist(self, file_hash: str) -> bool:
+        """
+        Check whether a document with the given hash
+        already exists in ChromaDB.
+        """
+        result = self.collection.get(
+            where={"file_hash": file_hash}
+        )
+
+        return len(result["ids"]) > 0
+
     def delete_vectors(self, ids):
 
         """Delete vectors with ids."""
