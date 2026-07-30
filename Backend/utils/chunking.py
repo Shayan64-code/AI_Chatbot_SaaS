@@ -8,6 +8,6 @@ def chunking(text: str, chunk: int = 500, overlap: int = 50):
     chunk_overlap = 100 
     )
 
-    split_docs = splitter.split_documents(text)
+    split_docs = splitter.split_text(text)
 
     return split_docs

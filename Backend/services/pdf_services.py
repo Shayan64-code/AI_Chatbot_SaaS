@@ -87,7 +87,7 @@ def create_metadata(
 
     return metadata
 
-vector_service = VectorService()
+vector_service = VectorService()  ##vector_service = VectorService("pdf_chunks")
 
 async def process_pdf(file: UploadFile):
 

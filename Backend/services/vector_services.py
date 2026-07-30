@@ -2,9 +2,9 @@ from database.chroma_db import get_collection
 
 class VectorService:
 
-    def __init__(self, Collection_name: str):
+    def __init__(self, collection_name: str = None):
 
-        self.collection = get_collection(Collection_name=None)
+        self.collection = get_collection(collection_name)
 
     def add_vectors(self, embeddings, ids, metadatas, documents):
         """
